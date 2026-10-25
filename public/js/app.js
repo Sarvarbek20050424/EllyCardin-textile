@@ -19,7 +19,7 @@ var I18N = {
     'about.fact.address': 'Manzil',
     'about.fact.addressVal': "O\u2018zbekiston, Farg\u2018ona viloyati, Quvasoy shahri, Mustaqillik ko\u2018chasi, 3-uy",
     'about.fact.tax': 'STIR',
-    'route.title1': 'Mato', 'route.title2': "yo\u2018li",
+    'route.title1': 'Mato', 'route.title2': "yo\u2018li", 'route.lead': "Mato va ip Quvasoydagi korxonamizda jamlanadi, tikuvchilik jarayonidan o\u2018tadi va tayyor mahsulotga aylanadi.", 'route.cta': "Hamkorlik uchun so\u2018rov →", 'reels.title1': "Sexlardan", 'reels.title2': "jonli kadrlar", 'reels.lead': "Tikuv va boshqa sexlarda har kuni nimalar bo\u2018layotganini qisqa videolarda ko\u2018ring.", 'reels.ig': "Instagramda kuzatish \u2197", 'reels.soon': "Tez orada", 'reels.count': "ta video", 'reels.close': "Yopish", 'reels.prev': "Oldingi", 'reels.next': "Keyingi",
     'route.nodeA': 'Mato', 'route.nodeB': 'Ip',
     'route.nodeAAlt': 'Xitoy', 'route.nodeBAlt': 'Turkiya',
     'process.title1': 'Ishlab', 'process.title2': 'chiqarish',
@@ -27,7 +27,7 @@ var I18N = {
     'process.step2.title': 'Kesish va tikuv', 'process.step2.text': 'Aniq kesish va professional tikuv ishlari.',
     'process.step3.title': 'Sifat nazorati', 'process.step3.text': 'Har bir mahsulot sinchkovlik bilan tekshiriladi.',
     'process.step4.title': 'Tayyor mahsulot', 'process.step4.text': 'Qadoqlash va buyurtmachiga yetkazib berish.',
-    'products.title1': 'Mahsulot', 'products.title2': 'lari',
+    'products.title1': "Bizning", 'products.title2': "mahsulotlar",
     'products.inquire': "Shu mahsulotga so\u2018rov", 'products.sample': 'namuna',
     'inquiry.title1': "So\u2018rov", 'inquiry.title2': 'yuborish',
     'inquiry.subtitle': "Savolingiz yoki buyurtmangiz bo\u2018lsa, formani to\u2018ldiring. Biz siz bilan tez orada bog\u2018lanamiz.",
@@ -52,9 +52,9 @@ var I18N = {
     'faq.a4': "Shartnoma tomonlarning kelishuviga asosan tuziladi. Batafsil ma\u2018lumot uchun biz bilan bog\u2018laning.",
     'faq.q5': "Bank rekvizitlarini qayerdan ko\u2018rish mumkin?",
     'faq.a5': "Bank rekvizitlari shu sahifaning \u201CRekvizitlar\u201D bo\u2018limida joylashgan.",
-    'req.title1': 'Rekvizit', 'req.title2': 'lar',
+    'req.title1': "Bank", 'req.title2': "rekvizitlari",
     'req.company': 'Korxona nomi', 'req.taxId': 'STIR', 'req.account': 'Hisob raqami (USD)',
-    'req.bank': 'Bank', 'req.bankCode': 'Bank kodi (MFO)', 'req.swift': 'SWIFT', 'req.address': 'Manzil',
+    'req.bank': 'Bank', 'req.bankCode': 'Bank kodi', 'req.swift': 'SWIFT', 'req.address': 'Manzil',
     'req.copy': 'Nusxa', 'req.copied': 'Nusxalandi!', 'req.downloadPdf': 'PDF yuklab olish',
     'contact.title1': 'Aloqa', 'contact.title2': "ma\u2018lumotlari",
     'contact.address': "O\u2018zbekiston, Farg\u2018ona viloyati, Quvasoy shahri, Mustaqillik ko\u2018chasi, 3-uy",
@@ -64,25 +64,25 @@ var I18N = {
   ru: {
     'nav.about': 'Компания', 'nav.activity': 'Деятельность', 'nav.products': 'Продукция',
     'nav.inquiry': 'Заявка', 'nav.requisites': 'Реквизиты', 'nav.contact': 'Контакты',
-    'hero.lead': 'Текстильное предприятие в Куvasay, Ферганская область. Вся информация о сотрудничестве, договорах и оплате — на этой странице.',
+    'hero.lead': 'Текстильное предприятие в Кувасай, Ферганская область. Вся информация о сотрудничестве, договорах и оплате — на этой странице.',
     'hero.cta1': 'Оставить заявку', 'hero.cta2': 'Реквизиты',
     'about.title1': 'О', 'about.title2': 'компании',
-    'about.p1': '«ELLYCARDIN TEKSTIL» МЧЖ — текстильное предприятие в городе Куvasay, Ферганская область. Мы работаем в сфере производства тканей и пошива.',
+    'about.p1': '«ELLYCARDIN TEKSTIL» ООО — текстильное предприятие в городе Кувасай, Ферганская область. Мы работаем в сфере производства тканей и пошива.',
     'about.p2': 'Наше предприятие ценит долгосрочное партнёрство, основанное на взаимном доверии. Качество, надёжность и своевременная доставка — наши основные принципы.',
     'about.fact.name': 'Название', 'about.fact.field': 'Деятельность',
     'about.fact.fieldVal': 'Текстиль: ткани и пошив',
     'about.fact.address': 'Адрес',
-    'about.fact.addressVal': 'Узбекистан, Ферганская область, г. Куvasay, ул. Мустакиллик, д. 3',
+    'about.fact.addressVal': 'Узбекистан, Ферганская область, г. Кувасай, ул. Мустакиллик, д. 3',
     'about.fact.tax': 'ИНН',
-    'route.title1': 'Путь', 'route.title2': 'ткани',
+    'route.title1': 'Путь', 'route.title2': 'ткани', 'route.lead': "Ткань и нить собираются на нашем предприятии в Кувасае, проходят пошив и становятся готовой продукцией.", 'route.cta': "Запрос на сотрудничество →", 'reels.title1': "Из цехов", 'reels.title2': "живые кадры", 'reels.lead': "Смотрите в коротких видео, что происходит в цехах каждый день.", 'reels.ig': "Смотреть в Instagram \u2197", 'reels.soon': "Скоро", 'reels.count': "видео", 'reels.close': "Закрыть", 'reels.prev': "Назад", 'reels.next': "Вперёд",
     'route.nodeA': 'Ткань', 'route.nodeB': 'Нить',
     'route.nodeAAlt': 'Китай', 'route.nodeBAlt': 'Турция',
-    'process.title1': 'Производ', 'process.title2': 'ство',
+    'process.title1': "Наше", 'process.title2': "производство",
     'process.step1.title': 'Ткань', 'process.step1.text': 'Отбор и подготовка качественного сырья.',
     'process.step2.title': 'Раскрой и пошив', 'process.step2.text': 'Точный раскрой и профессиональный пошив.',
     'process.step3.title': 'Контроль качества', 'process.step3.text': 'Каждое изделие тщательно проверяется.',
     'process.step4.title': 'Готовая продукция', 'process.step4.text': 'Упаковка и доставка заказчику.',
-    'products.title1': 'Продук', 'products.title2': 'ция',
+    'products.title1': "Наша", 'products.title2': "продукция",
     'products.inquire': 'Заявка на этот товар', 'products.sample': 'образец',
     'inquiry.title1': 'Оставить', 'inquiry.title2': 'заявку',
     'inquiry.subtitle': 'Если у вас есть вопрос или заказ, заполните форму. Мы свяжемся с вами в ближайшее время.',
@@ -96,7 +96,7 @@ var I18N = {
     'inquiry.successWA': 'Перенаправление в WhatsApp...', 'inquiry.successEmail': 'Открытие почтового клиента...',
     'faq.title1': 'Часто', 'faq.title2': 'задаваемые вопросы',
     'faq.q1': 'Где находится предприятие?',
-    'faq.a1': 'Ферганская область, г. Куvasay, ул. Мустакиллик, д. 3.',
+    'faq.a1': 'Ферганская область, г. Кувасай, ул. Мустакиллик, д. 3.',
     'faq.q2': 'Как осуществляется оплата?',
     'faq.a2': 'Оплата производится банковским переводом. Подробности — в разделе «Реквизиты» или свяжитесь с нами.',
     'faq.q3': 'Как связаться?',
@@ -105,14 +105,14 @@ var I18N = {
     'faq.a4': 'Договор заключается по соглашению сторон. Свяжитесь с нами для подробностей.',
     'faq.q5': 'Где посмотреть банковские реквизиты?',
     'faq.a5': 'Банковские реквизиты находятся в разделе «Реквизиты» на этой странице.',
-    'req.title1': 'Рекви', 'req.title2': 'зиты',
+    'req.title1': "Банковские", 'req.title2': "реквизиты",
     'req.company': 'Название', 'req.taxId': 'ИНН', 'req.account': 'Счёт (USD)',
-    'req.bank': 'Банк', 'req.bankCode': 'Код банка (МФО)', 'req.swift': 'SWIFT', 'req.address': 'Адрес',
+    'req.bank': 'Банк', 'req.bankCode': 'Код банка', 'req.swift': 'SWIFT', 'req.address': 'Адрес',
     'req.copy': 'Копировать', 'req.copied': 'Скопировано!', 'req.downloadPdf': 'Скачать PDF',
-    'contact.title1': 'Контакт', 'contact.title2': 'ные данные',
-    'contact.address': 'Узбекистан, Ферганская область, г. Куvasay, ул. Мустакиллик, д. 3',
-    'doc.title': 'ELLYCARDIN TEKSTIL — Текстильное предприятие | Куvasay, Фергана',
-    'doc.description': '«ELLYCARDIN TEKSTIL» МЧЖ — текстильное предприятие в Ферганской области.'
+    'contact.title1': "Наши", 'contact.title2': "контакты",
+    'contact.address': 'Узбекистан, Ферганская область, г. Кувасай, ул. Мустакиллик, д. 3',
+    'doc.title': 'ELLYCARDIN TEKSTIL — Текстильное предприятие | Кувасай, Фергана',
+    'doc.description': '«ELLYCARDIN TEKSTIL» ООО — текстильное предприятие в Ферганской области.'
   },
   en: {
     'nav.about': 'Company', 'nav.activity': 'Activity', 'nav.products': 'Products',
@@ -127,15 +127,15 @@ var I18N = {
     'about.fact.address': 'Address',
     'about.fact.addressVal': 'Uzbekistan, Fergana region, Kuvasay city, Mustakillik street, house 3',
     'about.fact.tax': 'Tax ID',
-    'route.title1': 'Fabric', 'route.title2': 'route',
+    'route.title1': 'Fabric', 'route.title2': 'route', 'route.lead': "Fabric and thread come together at our company in Kuvasay, go through sewing and become finished products.", 'route.cta': "Send a partnership inquiry →", 'reels.title1': "Live shots", 'reels.title2': "from the workshops", 'reels.lead': "See in short videos what happens in our workshops every day.", 'reels.ig': "Follow on Instagram \u2197", 'reels.soon': "Coming soon", 'reels.count': "videos", 'reels.close': "Close", 'reels.prev': "Previous", 'reels.next': "Next",
     'route.nodeA': 'Fabric', 'route.nodeB': 'Thread',
     'route.nodeAAlt': 'China', 'route.nodeBAlt': 'Turkey',
-    'process.title1': 'Manu', 'process.title2': 'facturing',
+    'process.title1': "How we", 'process.title2': "work",
     'process.step1.title': 'Fabric', 'process.step1.text': 'Selection and preparation of quality raw materials.',
     'process.step2.title': 'Cutting & Sewing', 'process.step2.text': 'Precise cutting and professional sewing.',
     'process.step3.title': 'Quality Control', 'process.step3.text': 'Every product is carefully inspected.',
     'process.step4.title': 'Finished Product', 'process.step4.text': 'Packaging and delivery to the customer.',
-    'products.title1': 'Pro', 'products.title2': 'ducts',
+    'products.title1': "Our", 'products.title2': "products",
     'products.inquire': 'Inquire about this product', 'products.sample': 'sample',
     'inquiry.title1': 'Send', 'inquiry.title2': 'inquiry',
     'inquiry.subtitle': 'If you have a question or order, fill out the form. We will contact you shortly.',
@@ -158,9 +158,9 @@ var I18N = {
     'faq.a4': 'A contract is made by mutual agreement. Contact us for details.',
     'faq.q5': 'Where to find bank details?',
     'faq.a5': 'Bank details are in the "Requisites" section of this page.',
-    'req.title1': 'Requi', 'req.title2': 'sites',
+    'req.title1': "Bank", 'req.title2': "details",
     'req.company': 'Company name', 'req.taxId': 'Tax ID', 'req.account': 'Account (USD)',
-    'req.bank': 'Bank', 'req.bankCode': 'Bank code (MFO)', 'req.swift': 'SWIFT', 'req.address': 'Address',
+    'req.bank': 'Bank', 'req.bankCode': 'Bank code', 'req.swift': 'SWIFT', 'req.address': 'Address',
     'req.copy': 'Copy', 'req.copied': 'Copied!', 'req.downloadPdf': 'Download PDF',
     'contact.title1': 'Contact', 'contact.title2': 'information',
     'contact.address': 'Uzbekistan, Fergana region, Kuvasay city, Mustakillik street, house 3',
@@ -169,9 +169,17 @@ var I18N = {
   }
 };
 
+// Typographic apostrophes: o‘ g‘ in Uzbek, ’ everywhere else
+function typo(s, lang) {
+  if (typeof s !== 'string') return s;
+  if (lang === 'uz') s = s.replace(/([oOgG])['’‘]/g, '$1\u2018');
+  return s.replace(/'/g, '\u2019');
+}
+
 function t(key) {
   var lang = document.documentElement.lang || 'uz';
-  return (I18N[lang] && I18N[lang][key]) || (I18N.uz && I18N.uz[key]) || key;
+  var v = (I18N[lang] && I18N[lang][key]) || (I18N.uz && I18N.uz[key]) || key;
+  return typo(v, lang);
 }
 
 function applyTranslations() {
@@ -236,22 +244,22 @@ function initLanguage() {
 // PRODUCTS
 // ============================================
 var PRODUCTS = [
-  { id: 'interlok', image: './assets/products/interlok.jpg', title: { uz: 'Interlok', ru: 'Интерлок', en: 'Interlock' }, text: { uz: "Bir tomonlama silliq mato.", ru: 'Односторонний гладкий материал.', en: 'Smooth single-sided fabric.' } },
-  { id: 'rib', image: './assets/products/rib.jpg', title: { uz: 'Rib', ru: 'Риб', en: 'Rib' }, text: { uz: "Elastik mato.", ru: 'Эластичный материал.', en: 'Elastic fabric.' } },
+  { id: 'interlok', image: './assets/products/interlok.jpg', title: { uz: 'Interlok', ru: 'Интерлок', en: 'Interlock' }, text: { uz: "Zich, silliq to'qima.", ru: 'Плотное гладкое полотно.', en: 'Dense, smooth fabric.' } },
+  { id: 'rib', image: './assets/products/rib.jpg', title: { uz: 'Rib', ru: 'Риб', en: 'Rib' }, text: { uz: "Elastik, qirrali to'qima.", ru: 'Эластичное полотно в рубчик.', en: 'Elastic ribbed fabric.' } },
   { id: 'kulirka', image: './assets/products/kulirka.jpg', title: { uz: 'Kulirka', ru: 'Кулирка', en: 'Jersey' }, text: { uz: "Yengil, yupqa mato.", ru: 'Лёгкий, тонкий материал.', en: 'Light, thin fabric.' } },
   { id: 'fleece', image: './assets/products/fleece.jpg', title: { uz: 'Fleece', ru: 'Флис', en: 'Fleece' }, text: { uz: "Ichki tomoni yumshoq, issiq mato.", ru: 'Мягкий изнутри, тёплый материал.', en: 'Soft inside, warm fabric.' } },
-  { id: 'pike', image: './assets/products/pike.jpg', title: { uz: 'Pike', ru: 'Пике', en: 'Pique' }, text: { uz: "To'qilgan strukturaviy mato.", ru: 'Структурный вязаный материал.', en: 'Structured knitted fabric.' } },
+  { id: 'pike', image: './assets/products/pike.jpg', title: { uz: 'Pike', ru: 'Пике', en: 'Pique' }, text: { uz: "Relyefli sirtli mato.", ru: 'Полотно с рельефной поверхностью.', en: 'Fabric with a textured surface.' } },
   { id: 'footer', image: './assets/products/footer.jpg', title: { uz: 'Footer', ru: 'Футер', en: 'Footer' }, text: { uz: "Mustahkam, zich mato.", ru: 'Прочный, плотный материал.', en: 'Durable, dense fabric.' } }
 ];
 
 function getProductTitle(product) {
   var lang = document.documentElement.lang || 'uz';
-  return (product.title && product.title[lang]) || product.title.uz || product.id;
+  return typo((product.title && product.title[lang]) || product.title.uz || product.id, lang);
 }
 
 function getProductText(product) {
   var lang = document.documentElement.lang || 'uz';
-  return (product.text && product.text[lang]) || product.text.uz || '';
+  return typo((product.text && product.text[lang]) || product.text.uz || '', lang);
 }
 
 // ============================================
@@ -339,16 +347,18 @@ function getProductText(product) {
       btns[i].addEventListener('click', function() {
         var lang = this.getAttribute('data-lang');
         if (lang) setLanguage(lang);
-        renderProducts(); renderFAQ(); renderRequisites(); populateProductSelect();
+        renderProducts(); renderFAQ(); renderRequisites(); populateProductSelect(); renderReels();
       });
     }
   }
 
   function initThreads() {
-    if (!window.gsap || !window.ScrollTrigger) return;
-    if (reducedMotion) {
-      var paths = document.querySelectorAll('.section-thread path, .route-thread-line');
-      for (var i = 0; i < paths.length; i++) { paths[i].style.strokeDashoffset = '0'; }
+    if (!window.gsap || !window.ScrollTrigger || reducedMotion) {
+      // No animation library (or reduced motion): show every thread fully drawn
+      var all = document.querySelectorAll('.section-thread path, .route-thread-line, .process-line-fill');
+      for (var q = 0; q < all.length; q++) { all[q].style.strokeDashoffset = '0'; }
+      var st = document.querySelectorAll('.process-step');
+      for (var s = 0; s < st.length; s++) { st[s].classList.add('lit'); }
       return;
     }
     window.gsap.registerPlugin(window.ScrollTrigger);
@@ -497,10 +507,18 @@ function getProductText(product) {
       { label: t('req.address'), value: CONFIG.address[lang] || CONFIG.address.uz }
     ];
     tbody.innerHTML = '';
+    var copyIcon = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1"/><path d="M2 9V2h7" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>';
     for (var i = 0; i < rows.length; i++) {
       var tr = document.createElement('tr');
-      tr.innerHTML = '<th>' + rows[i].label + '</th><td>' + rows[i].value + '<button class="copy-btn" data-copy="' + rows[i].value + '" aria-label="' + t('req.copy') + '"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1"/><path d="M2 9V2h7" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg><span>' + t('req.copy') + '</span></button></td>';
-      tbody.appendChild(tr);
+      var th = document.createElement('th'); th.textContent = rows[i].label;
+      var td = document.createElement('td');
+      td.appendChild(document.createTextNode(typo(rows[i].value, lang).replace(/"([^"]*)"/g, '\u201C$1\u201D')));
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn'; btn.type = 'button';
+      btn.setAttribute('data-copy', rows[i].value);
+      btn.setAttribute('aria-label', t('req.copy') + ': ' + rows[i].label);
+      btn.innerHTML = copyIcon + '<span>' + t('req.copy') + '</span>';
+      td.appendChild(btn); tr.appendChild(th); tr.appendChild(td); tbody.appendChild(tr);
     }
     var copyBtns = tbody.querySelectorAll('.copy-btn');
     for (var j = 0; j < copyBtns.length; j++) { copyBtns[j].addEventListener('click', handleCopy); }
@@ -605,240 +623,374 @@ function getProductText(product) {
   }
 
   // ============================================
-  // INTERACTIVE SILK WAVES (cursor-reactive)
+  // HERO EFFECTS — one shared animation loop
+  // Runs only while the hero is on screen and the tab is visible.
   // ============================================
+  var heroVisible = true;
+  var heroTasks = [];
+  var heroRaf = null;
+  var wideMQ = window.matchMedia('(min-width: 769px)');
+
+  function heroTick() {
+    heroRaf = null;
+    if (!heroVisible || document.hidden) return;
+    for (var i = 0; i < heroTasks.length; i++) heroTasks[i]();
+    heroRaf = requestAnimationFrame(heroTick);
+  }
+  function heroKick() {
+    if (!heroRaf && heroVisible && !document.hidden && heroTasks.length) heroRaf = requestAnimationFrame(heroTick);
+  }
+  function initHeroLoop() {
+    var hero = document.querySelector('.hero');
+    if (hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries) {
+        heroVisible = entries[0].isIntersecting;
+        heroKick();
+      }).observe(hero);
+    }
+    document.addEventListener('visibilitychange', heroKick);
+  }
+
+  // ---------- 1. Silk waves (react to the cursor) ----------
   function initSilkWaves() {
     if (reducedMotion) return;
     var svg = document.getElementById('silk-waves');
-    if (!svg) return;
-    
+    var hero = document.querySelector('.hero');
+    if (!svg || !hero) return;
     var waves = svg.querySelectorAll('.silk-wave');
-    var mouseX = 0.5, mouseY = 0.5;
-    var targetX = 0.5, targetY = 0.5;
-    var heroSection = document.querySelector('.hero');
-    
-    // Base wave paths (normalized coordinates)
-    var basePaths = [
-      { points: [[0, 0.5], [0.25, 0.4375], [0.5, 0.5], [0.75, 0.5625], [1, 0.5]], amplitude: 0.05 },
-      { points: [[0, 0.375], [0.333, 0.3125], [0.667, 0.375], [1, 0.375]], amplitude: 0.04 },
-      { points: [[0, 0.625], [0.167, 0.5625], [0.5, 0.625], [0.833, 0.6875], [1, 0.625]], amplitude: 0.06 },
-      { points: [[0, 0.25], [0.417, 0.225], [0.75, 0.275], [1, 0.25]], amplitude: 0.03 }
+    var defs = [
+      { pts: [0, 0.5, 0.25, 0.4375, 0.5, 0.5, 0.75, 0.5625, 1, 0.5], amp: 0.05 },
+      { pts: [0, 0.375, 0.333, 0.3125, 0.667, 0.375, 1, 0.375], amp: 0.04 },
+      { pts: [0, 0.625, 0.167, 0.5625, 0.5, 0.625, 0.833, 0.6875, 1, 0.625], amp: 0.06 },
+      { pts: [0, 0.25, 0.417, 0.225, 0.75, 0.275, 1, 0.25], amp: 0.03 }
     ];
-    
-    // Track mouse position relative to hero
-    heroSection.addEventListener('mousemove', function(e) {
-      var rect = heroSection.getBoundingClientRect();
-      targetX = (e.clientX - rect.left) / rect.width;
-      targetY = (e.clientY - rect.top) / rect.height;
+    var mx = 0.5, my = 0.5, tx = 0.5, ty = 0.5;
+    hero.addEventListener('pointermove', function(e) {
+      if (e.pointerType === 'touch') return;
+      var r = hero.getBoundingClientRect();
+      tx = (e.clientX - r.left) / r.width;
+      ty = (e.clientY - r.top) / r.height;
     });
-    
-    heroSection.addEventListener('mouseleave', function() {
-      targetX = 0.5;
-      targetY = 0.5;
-    });
-    
-    function updateWaves() {
-      // Smooth interpolation
-      mouseX += (targetX - mouseX) * 0.08;
-      mouseY += (targetY - mouseY) * 0.08;
-      
-      var time = Date.now() * 0.001;
-      
-      for (var i = 0; i < waves.length && i < basePaths.length; i++) {
-        var base = basePaths[i];
-        var phaseOffset = i * 0.5;
-        var cursorInfluence = Math.abs(mouseX - 0.5) * 0.3 + Math.abs(mouseY - 0.5) * 0.2;
-        
-        // Build path with cursor influence
-        var pathData = 'M';
-        for (var j = 0; j < base.points.length; j++) {
-          var px = base.points[j][0];
-          var py = base.points[j][1];
-          
-          // Add wave motion
-          var wave = Math.sin(time + px * 4 + phaseOffset) * base.amplitude * 0.5;
-          
-          // Add cursor influence (waves bend toward cursor)
-          var dx = mouseX - px;
-          var dy = mouseY - py;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          var influence = Math.max(0, 1 - dist * 2) * cursorInfluence * 0.15;
-          
-          var finalX = px * 1200;
-          var finalY = (py + wave + dy * influence) * 800;
-          
-          if (j === 0) {
-            pathData += finalX + ',' + finalY;
-          } else {
-            // Use quadratic curves for smooth waves
-            var cpX = (base.points[j-1][0] + px) * 0.5 * 1200;
-            var cpY = (base.points[j-1][1] + py + wave * 0.5) * 0.5 * 800 + dy * influence * 0.5;
-            pathData += ' Q' + cpX + ',' + cpY + ' ' + finalX + ',' + finalY;
-          }
+    hero.addEventListener('pointerleave', function() { tx = 0.5; ty = 0.5; });
+
+    function frame() {
+      mx += (tx - mx) * 0.06;
+      my += (ty - my) * 0.06;
+      var time = performance.now() * 0.001;
+      for (var i = 0; i < waves.length && i < defs.length; i++) {
+        var p = defs[i].pts, amp = defs[i].amp, n = p.length / 2;
+        var xs = [], ys = [];
+        for (var j = 0; j < n; j++) {
+          var px = p[j * 2], py = p[j * 2 + 1];
+          var wave = Math.sin(time * 0.8 + px * 5 + i * 0.9) * amp * 0.5;
+          var dx = mx - px, dy = my - py;
+          var pull = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy) * 2.2);
+          xs.push(px * 1200);
+          ys.push((py + wave + dy * pull * 0.22) * 800);
         }
-        
-        waves[i].setAttribute('d', pathData);
+        var d = 'M' + xs[0].toFixed(1) + ',' + ys[0].toFixed(1);
+        for (var k = 1; k < n - 1; k++) {
+          var mxp = (xs[k] + xs[k + 1]) / 2, myp = (ys[k] + ys[k + 1]) / 2;
+          d += ' Q' + xs[k].toFixed(1) + ',' + ys[k].toFixed(1) + ' ' + mxp.toFixed(1) + ',' + myp.toFixed(1);
+        }
+        d += ' L' + xs[n - 1].toFixed(1) + ',' + ys[n - 1].toFixed(1);
+        waves[i].setAttribute('d', d);
       }
-      
-      requestAnimationFrame(updateWaves);
     }
-    
-    updateWaves();
+    heroTasks.push(frame);
   }
 
-  // ============================================
-  // FLYING FIBERS (particles)
-  // ============================================
+  // ---------- 2. Flying fibers ----------
   function initFlyingFibers() {
     if (reducedMotion) return;
-    if (window.innerWidth < 768) return; // Disable on mobile
-    
     var canvas = document.getElementById('flying-fibers');
-    if (!canvas) return;
+    var hero = document.querySelector('.hero');
+    if (!canvas || !hero) return;
     var ctx = canvas.getContext('2d');
     if (!ctx) return;
-    
-    var heroSection = document.querySelector('.hero');
     var fibers = [];
-    var fiberCount = 35; // Keep under 40 as recommended
-    var animationId = null;
-    var isPageVisible = true;
-    
+    var COUNT = 35;
+    var w = 0, h = 0;
+
     function resize() {
-      canvas.width = heroSection.offsetWidth;
-      canvas.height = heroSection.offsetHeight;
+      var nw = hero.offsetWidth, nh = hero.offsetHeight;
+      if (w && h) {
+        for (var i = 0; i < fibers.length; i++) { fibers[i].x *= nw / w; fibers[i].y *= nh / h; }
+      }
+      w = canvas.width = nw;
+      h = canvas.height = nh;
     }
     resize();
     window.addEventListener('resize', resize);
-    
-    // Create fibers
-    for (var i = 0; i < fiberCount; i++) {
+    for (var i = 0; i < COUNT; i++) {
       fibers.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.2 - 0.1, // Slight upward drift
-        length: Math.random() * 8 + 4,
-        angle: Math.random() * Math.PI * 2,
-        rotationSpeed: (Math.random() - 0.5) * 0.02,
-        opacity: Math.random() * 0.4 + 0.2
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.2 - 0.1,
+        len: Math.random() * 8 + 4, a: Math.random() * Math.PI * 2,
+        rs: (Math.random() - 0.5) * 0.02, op: Math.random() * 0.4 + 0.2
       });
     }
-    
-    // Pause when page hidden
-    document.addEventListener('visibilitychange', function() {
-      isPageVisible = !document.hidden;
-      if (isPageVisible && !animationId) {
-        animate();
-      }
-    });
-    
-    function animate() {
-      if (!isPageVisible) {
-        animationId = null;
-        return;
-      }
-      
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+    function frame() {
+      if (!wideMQ.matches) return;
+      ctx.clearRect(0, 0, w, h);
       for (var i = 0; i < fibers.length; i++) {
         var f = fibers[i];
-        
-        // Update position
-        f.x += f.vx;
-        f.y += f.vy;
-        f.angle += f.rotationSpeed;
-        
-        // Wrap around
-        if (f.x < -f.length) f.x = canvas.width + f.length;
-        if (f.x > canvas.width + f.length) f.x = -f.length;
-        if (f.y < -f.length) f.y = canvas.height + f.length;
-        if (f.y > canvas.height + f.length) f.y = -f.length;
-        
-        // Draw fiber
-        ctx.save();
-        ctx.translate(f.x, f.y);
-        ctx.rotate(f.angle);
-        ctx.strokeStyle = 'rgba(194, 165, 107, ' + f.opacity + ')';
+        f.x += f.vx; f.y += f.vy; f.a += f.rs;
+        if (f.x < -f.len) f.x = w + f.len; else if (f.x > w + f.len) f.x = -f.len;
+        if (f.y < -f.len) f.y = h + f.len; else if (f.y > h + f.len) f.y = -f.len;
+        var dx = Math.cos(f.a) * f.len / 2, dy = Math.sin(f.a) * f.len / 2;
+        ctx.strokeStyle = 'rgba(194,165,107,' + f.op + ')';
         ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.moveTo(-f.length / 2, 0);
-        ctx.lineTo(f.length / 2, 0);
+        ctx.moveTo(f.x - dx, f.y - dy);
+        ctx.lineTo(f.x + dx, f.y + dy);
         ctx.stroke();
-        ctx.restore();
       }
-      
-      animationId = requestAnimationFrame(animate);
     }
-    
-    animate();
+    heroTasks.push(frame);
   }
 
-  // ============================================
-  // STITCH LINE WITH NEEDLE
-  // ============================================
+  // ---------- 3. Stitch line with needle (scroll driven, runs only while moving) ----------
   function initStitchLine() {
     if (reducedMotion) return;
-    if (window.innerWidth < 768) return; // Disable on mobile
-    
     var svg = document.getElementById('stitch-line');
     if (!svg) return;
     var path = svg.querySelector('.stitch-path');
     var needle = svg.querySelector('.stitch-needle');
     if (!path || !needle) return;
-    
-    var scrollProgress = 0;
-    var targetProgress = 0;
-    
-    function updateStitch() {
-      // Smooth interpolation
-      scrollProgress += (targetProgress - scrollProgress) * 0.1;
-      
-      // Calculate path based on scroll
-      var windowHeight = window.innerHeight;
-      var docHeight = document.documentElement.scrollHeight;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var progress = scrollTop / (docHeight - windowHeight);
-      
-      // Create stitch path along left edge
-      var startX = 40; // 40px from left
-      var startY = 0;
-      var endY = docHeight * progress;
-      
-      // Add slight wave to the stitch
-      var waveAmplitude = 3;
-      var pathData = 'M' + startX + ',' + startY;
-      var segments = Math.floor(endY / 20);
-      
-      for (var i = 1; i <= segments; i++) {
-        var y = (endY / segments) * i;
-        var wave = Math.sin(i * 0.3 + scrollProgress * 10) * waveAmplitude;
-        pathData += ' L' + (startX + wave) + ',' + y;
-      }
-      
-      path.setAttribute('d', pathData);
-      
-      // Position needle at end of path
-      var needleX = startX + Math.sin(segments * 0.3 + scrollProgress * 10) * waveAmplitude;
-      var needleY = endY;
-      var needleAngle = Math.atan2(
-        Math.cos(segments * 0.3 + scrollProgress * 10) * waveAmplitude * 0.3,
-        20
-      ) * 180 / Math.PI;
-      
-      needle.setAttribute('transform', 'translate(' + needleX + ',' + needleY + ') rotate(' + (needleAngle + 90) + ')');
-      
-      requestAnimationFrame(updateStitch);
+    var cur = 0, target = 0, raf = null;
+
+    function readTarget() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var top = window.pageYOffset || document.documentElement.scrollTop || 0;
+      target = max > 0 ? Math.min(1, Math.max(0, top / max)) : 0;
     }
-    
-    window.addEventListener('scroll', function() {
-      var windowHeight = window.innerHeight;
-      var docHeight = document.documentElement.scrollHeight;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      targetProgress = scrollTop / (docHeight - windowHeight);
+    function draw() {
+      raf = null;
+      cur += (target - cur) * 0.12;
+      if (Math.abs(target - cur) < 0.0004) cur = target;
+      var vh = window.innerHeight;
+      var left = (window.innerWidth - 1080) / 2;
+      var x = Math.max(8, Math.min(40, left / 2));
+      var top = 70, bottom = vh - 60;
+      var endY = top + cur * (bottom - top);
+      var steps = Math.max(2, Math.round(endY / 14));
+      var d = 'M' + x + ',0';
+      for (var i = 1; i <= steps; i++) {
+        var y = (endY / steps) * i;
+        d += ' L' + (x + Math.sin(i * 0.5 + cur * 14) * 2.5).toFixed(1) + ',' + y.toFixed(1);
+      }
+      path.setAttribute('d', d);
+      var nx = x + Math.sin(steps * 0.5 + cur * 14) * 2.5;
+      needle.setAttribute('transform', 'translate(' + nx.toFixed(1) + ',' + endY.toFixed(1) + ') rotate(' + (Math.cos(steps * 0.5 + cur * 14) * 8).toFixed(1) + ')');
+      if (cur !== target) raf = requestAnimationFrame(draw);
+    }
+    function kick() { readTarget(); if (!raf) raf = requestAnimationFrame(draw); }
+    window.addEventListener('scroll', kick, { passive: true });
+    window.addEventListener('resize', kick);
+    kick();
+  }
+
+  // ---------- 4. Cursor trail (fine pointers only, runs only while moving) ----------
+  function initCursorTrail() {
+    if (reducedMotion) return;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    var canvas = document.getElementById('cursor-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0;
+    function size() {
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    size();
+    window.addEventListener('resize', size);
+
+    var pts = [], mx = -100, my = -100, dx = -100, dy = -100, r = 3, rt = 3, raf = null, seen = false;
+    function loop() {
+      raf = null;
+      var now = performance.now();
+      dx += (mx - dx) * 0.35; dy += (my - dy) * 0.35; r += (rt - r) * 0.2;
+      pts.push({ x: dx, y: dy, t: now });
+      while (pts.length && now - pts[0].t > 450) pts.shift();
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 1; i < pts.length; i++) {
+        var a = 1 - (now - pts[i].t) / 450;
+        ctx.strokeStyle = 'rgba(194,165,107,' + (a * 0.55).toFixed(3) + ')';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.moveTo(pts[i - 1].x, pts[i - 1].y); ctx.lineTo(pts[i].x, pts[i].y); ctx.stroke();
+      }
+      ctx.fillStyle = 'rgba(194,165,107,0.9)';
+      ctx.beginPath(); ctx.arc(dx, dy, r, 0, Math.PI * 2); ctx.fill();
+      var moving = Math.abs(mx - dx) > 0.3 || Math.abs(my - dy) > 0.3 || Math.abs(rt - r) > 0.05;
+      if (moving || pts.length > 2) raf = requestAnimationFrame(loop);
+    }
+    function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+    window.addEventListener('pointermove', function(e) {
+      if (e.pointerType === 'touch') return;
+      if (!seen) { seen = true; dx = e.clientX; dy = e.clientY; }
+      mx = e.clientX; my = e.clientY; kick();
     }, { passive: true });
-    
-    updateStitch();
+    document.addEventListener('pointerover', function(e) {
+      rt = (e.target.closest && e.target.closest('a, button, [role="button"], summary, input, select, textarea, label')) ? 7 : 3;
+      kick();
+    });
+    document.documentElement.addEventListener('pointerleave', function() { ctx.clearRect(0, 0, W, H); mx = my = -100; });
+  }
+
+  // ---------- Route globe: gold-thread globe behind "Mato yo'li" ----------
+  // Optional land dots: define window.LAND_DOTS = [[lat, lon], ...] (see README) to show continents.
+  function initGlobe() {
+    var wrap = document.getElementById('route-map');
+    if (!wrap) return;
+    var cv = document.createElement('canvas');
+    cv.className = 'route-globe'; cv.setAttribute('aria-hidden', 'true');
+    wrap.insertBefore(cv, wrap.firstChild);
+    var ctx = cv.getContext('2d');
+    if (!ctx) return;
+    var D = Math.PI / 180, HOME = { lat: 40.3, lon: 72.0 };
+    var pins = [{ lat: 40.3, lon: 72.0, main: true }], arcs = [];
+    if (typeof CONFIG !== 'undefined' && CONFIG.showRouteCountries) {
+      pins.push({ lat: 35, lon: 103 }, { lat: 39, lon: 35 }); arcs = [[1, 0], [2, 0]];
+    }
+    var off = { x: 0, y: 0 }, tgt = { x: 0, y: 0 }, S = 300, R = 146, raf = null, vis = false;
+    function size() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2), r = cv.getBoundingClientRect();
+      S = r.width || 300; R = S / 2 - 4;
+      cv.width = S * dpr; cv.height = S * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function P(lat, lon) {
+      var la = lat * D, dl = (lon - HOME.lon - off.x) * D, a0 = (HOME.lat + off.y) * D;
+      var cl = Math.cos(la);
+      return { x: S / 2 + cl * Math.sin(dl) * R,
+               y: S / 2 - (Math.cos(a0) * Math.sin(la) - Math.sin(a0) * cl * Math.cos(dl)) * R,
+               z: Math.sin(a0) * Math.sin(la) + Math.cos(a0) * cl * Math.cos(dl) };
+    }
+    function line(pts, alpha, w) {
+      ctx.strokeStyle = 'rgba(194,165,107,' + alpha + ')'; ctx.lineWidth = w; ctx.beginPath();
+      var pen = false;
+      for (var i = 0; i < pts.length; i++) {
+        if (pts[i].z > 0) { if (pen) ctx.lineTo(pts[i].x, pts[i].y); else ctx.moveTo(pts[i].x, pts[i].y); pen = true; } else pen = false;
+      }
+      ctx.stroke();
+    }
+    function draw(time) {
+      ctx.clearRect(0, 0, S, S);
+      var g = ctx.createRadialGradient(S / 2 - R * 0.3, S / 2 - R * 0.3, R * 0.1, S / 2, S / 2, R);
+      g.addColorStop(0, 'rgba(194,165,107,0.10)'); g.addColorStop(1, 'rgba(194,165,107,0.02)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(S / 2, S / 2, R, 0, 7); ctx.fill();
+      ctx.strokeStyle = 'rgba(194,165,107,0.35)'; ctx.lineWidth = 1; ctx.stroke();
+      var lat, lon, pts;
+      for (lon = -180; lon < 180; lon += 20) { pts = []; for (lat = -90; lat <= 90; lat += 5) pts.push(P(lat, lon)); line(pts, 0.16, 0.8); }
+      for (lat = -60; lat <= 60; lat += 20) { pts = []; for (lon = -180; lon <= 180; lon += 5) pts.push(P(lat, lon)); line(pts, 0.16, 0.8); }
+      if (window.LAND_DOTS) {
+        ctx.fillStyle = 'rgba(194,165,107,0.55)';
+        for (var i = 0; i < window.LAND_DOTS.length; i++) { var q = P(window.LAND_DOTS[i][0], window.LAND_DOTS[i][1]); if (q.z > 0.05) ctx.fillRect(q.x - 0.7, q.y - 0.7, 1.4, 1.4); }
+      }
+      for (var a = 0; a < arcs.length; a++) {
+        var A = pins[arcs[a][0]], B = pins[arcs[a][1]], a1 = A.lat * D, o1 = A.lon * D, a2 = B.lat * D, o2 = B.lon * D;
+        var v1 = [Math.cos(a1) * Math.cos(o1), Math.cos(a1) * Math.sin(o1), Math.sin(a1)], v2 = [Math.cos(a2) * Math.cos(o2), Math.cos(a2) * Math.sin(o2), Math.sin(a2)];
+        var om = Math.acos(Math.max(-1, Math.min(1, v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2]))); pts = [];
+        for (var s = 0; s <= 40; s++) {
+          var f = s / 40, k1 = Math.sin((1 - f) * om) / Math.sin(om), k2 = Math.sin(f * om) / Math.sin(om);
+          var X = k1 * v1[0] + k2 * v2[0], Y = k1 * v1[1] + k2 * v2[1], Z = k1 * v1[2] + k2 * v2[2];
+          pts.push(P(Math.asin(Z) / D, Math.atan2(Y, X) / D));
+        }
+        line(pts, 0.8, 1.2);
+      }
+      var pulse = (time % 2000) / 2000;
+      for (var n = 0; n < pins.length; n++) {
+        var pp = P(pins[n].lat, pins[n].lon); if (pp.z <= 0) continue;
+        ctx.fillStyle = 'rgba(232,217,174,0.95)'; ctx.beginPath(); ctx.arc(pp.x, pp.y, pins[n].main ? 4 : 3, 0, 7); ctx.fill();
+        if (pins[n].main && !reducedMotion) { ctx.strokeStyle = 'rgba(232,217,174,' + (1 - pulse) * 0.7 + ')'; ctx.beginPath(); ctx.arc(pp.x, pp.y, 4 + pulse * 14, 0, 7); ctx.stroke(); }
+      }
+    }
+    function frame(now) {
+      raf = null;
+      off.x += (tgt.x - off.x) * 0.07; off.y += (tgt.y - off.y) * 0.07;
+      draw(now);
+      if (vis && !document.hidden) raf = requestAnimationFrame(frame);
+    }
+    function kick() { if (!raf && vis && !document.hidden) raf = requestAnimationFrame(frame); }
+    size(); draw(0);
+    window.addEventListener('resize', function() { size(); draw(0); });
+    if (reducedMotion) return;
+    wrap.addEventListener('pointermove', function(e) {
+      if (e.pointerType === 'touch') return;
+      var r = wrap.getBoundingClientRect();
+      tgt.x = ((e.clientX - r.left) / r.width - 0.5) * -24; tgt.y = ((e.clientY - r.top) / r.height - 0.5) * 18; kick();
+    });
+    wrap.addEventListener('pointerleave', function() { tgt.x = 0; tgt.y = 0; kick(); });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(es) { vis = es[0].isIntersecting; kick(); }).observe(wrap);
+    document.addEventListener('visibilitychange', kick);
+  }
+
+  // ---------- Workshop videos (template-driven, see js/videos.js) ----------
+  var reelTrigger = null;
+  function renderReels() {
+    var track = document.getElementById('reels-track');
+    if (!track) return;
+    var lang = document.documentElement.lang || 'uz';
+    var list = (typeof VIDEOS !== 'undefined' && VIDEOS.length) ? VIDEOS : null;
+    var real = !!list;
+    if (!list) list = [{}, {}, {}, {}, {}];
+    track.innerHTML = '';
+    for (var i = 0; i < list.length; i++) {
+      var v = list[i], card = document.createElement('button');
+      card.type = 'button'; card.className = 'reel' + (real ? '' : ' reel--soon');
+      card.style.setProperty('--h', (i * 37) % 60);
+      var title = real && v.title ? typo(v.title[lang] || v.title.uz || '', lang) : '';
+      if (real && v.src) { card.setAttribute('aria-label', title || t('reels.ig')); card.setAttribute('data-i', i); }
+      else { card.disabled = true; card.setAttribute('aria-label', t('reels.soon')); }
+      var poster = real && v.poster ? '<img src="' + v.poster + '" alt="" loading="lazy" onerror="this.remove()">' : '';
+      card.innerHTML = '<span class="reel__bg"></span>' + poster +
+        (real && v.duration ? '<span class="reel__time">' + v.duration + '</span>' : '') +
+        '<span class="reel__ig" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="2" width="12" height="12" rx="3.5"/><circle cx="8" cy="8" r="2.8"/><circle cx="11.4" cy="4.6" r=".5" fill="currentColor"/></svg></span>' +
+        '<span class="reel__play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg></span>' +
+        '<span class="reel__cap">' + (real ? title : t('reels.soon')) + '</span>';
+      track.appendChild(card);
+    }
+    var cnt = document.getElementById('reels-count');
+    if (cnt) cnt.textContent = real ? list.length + ' ' + t('reels.count') : '';
+    var ig = document.getElementById('reels-ig');
+    if (ig && typeof CONFIG !== 'undefined') ig.href = CONFIG.instagram;
+  }
+
+  function initReels() {
+    var track = document.getElementById('reels-track');
+    if (!track) return;
+    track.addEventListener('click', function(e) {
+      var card = e.target.closest ? e.target.closest('.reel[data-i]') : null;
+      if (!card) return;
+      var v = VIDEOS[+card.getAttribute('data-i')];
+      if (!v || !v.src) return;
+      reelTrigger = card;
+      var m = document.getElementById('reel-modal'), vid = document.getElementById('reel-video');
+      vid.src = v.src; if (v.poster) vid.poster = v.poster;
+      m.hidden = false; document.body.style.overflow = 'hidden';
+      var p = vid.play(); if (p && p.catch) p.catch(function() {});
+      document.getElementById('reel-close').focus();
+    });
+    function close() {
+      var m = document.getElementById('reel-modal'), vid = document.getElementById('reel-video');
+      if (m.hidden) return;
+      vid.pause(); vid.removeAttribute('src'); vid.load(); m.hidden = true; document.body.style.overflow = '';
+      if (reelTrigger) reelTrigger.focus();
+    }
+    document.getElementById('reel-close').addEventListener('click', close);
+    document.getElementById('reel-modal').addEventListener('click', function(e) { if (e.target === this) close(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+    var step = function(dir) { return function() { track.scrollBy({ left: dir * track.clientWidth * 0.8, behavior: reducedMotion ? 'auto' : 'smooth' }); }; };
+    document.getElementById('reels-prev').addEventListener('click', step(-1));
+    document.getElementById('reels-next').addEventListener('click', step(1));
+  }
+
+  function applyTeamFlag() {
+    var team = document.getElementById('team');
+    if (team && typeof CONFIG !== 'undefined' && CONFIG.showTeam) team.style.display = '';
   }
 
   function init() {
@@ -848,9 +1000,16 @@ function getProductText(product) {
     initScrollProgress();
     initLangSwitch();
     initVideo();
+    initHeroLoop();
     initSilkWaves();
     initFlyingFibers();
+    heroKick();
     initStitchLine();
+    initCursorTrail();
+    initGlobe();
+    renderReels();
+    initReels();
+    applyTeamFlag();
     renderProducts();
     renderFAQ();
     renderRequisites();

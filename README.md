@@ -1,136 +1,48 @@
-# ELLYCARDIN TEKSTIL — Corporate Website
+# Ellycardin Tekstil — sayt
 
-A premium minimalist one-page website for "ELLYCARDIN TEKSTIL" FC LLC, a textile enterprise in Kuvasay, Fergana region, Uzbekistan.
+Ishga tushirish: `index.html` ni ikki marta bosib oching (server shart emas) yoki papkani istalgan statik hostingga yuklang.
 
-## Features
+## Fayllar
+- `index.html` — sahifa tuzilmasi
+- `css/styles.css` — dizayn
+- `js/config.js` — kontaktlar, rekvizitlar, bayroqlar (`index.html` da app.js dan OLDIN ulangan bo‘lishi shart)
+- `js/app.js` — tillar, animatsiyalar, forma, slayder
+- `assets/logo-full.png`, `assets/logo-mark.png` — logotip (shaffof)
 
-- **Trilingual**: Uzbek (default), Russian, English — switchable without page reload
-- **Responsive**: Mobile-first from 360px, works on all screen sizes
-- **Accessible**: WCAG AA contrast, keyboard navigation, screen reader support
-- **Animated**: Gold thread concept with GSAP ScrollTrigger (graceful degradation)
-- **Print-ready**: Requisites section prints as a clean one-page document
-- **No dependencies on server**: Works by double-clicking `index.html` (file://) or on any static host
+## Qo‘shishingiz kerak (ixtiyoriy, bo‘lmasa ham sayt ishlaydi)
+- `assets/hero.mp4` va `assets/hero.webm` — orqa fon videosi (15-30 s, ovozsiz). `assets/hero-poster.jpg` ixtiyoriy.
+- `assets/products/interlok.jpg`, `rib.jpg`, `kulirka.jpg`, `fleece.jpg`, `pike.jpg`, `footer.jpg` — mahsulot rasmlari. Nomlar va matnlar `js/app.js` ichidagi `PRODUCTS` ro‘yxatida (hozircha NAMUNA).
 
-## Quick Start
+## Bayroqlar (`js/config.js`)
+- `showRouteCountries` — "Xitoy / Turkiya" yozuvlarini ko‘rsatish (egasi tasdiqlagandan keyin)
+- `showTeam` — "Jamoa" bo‘limini ko‘rsatish (tasdiqlangandan keyin; matnlarni avval tekshiring)
 
-### Option 1: Direct open
-Simply open `index.html` in a browser. All assets load from CDN.
+## Eslatma
+GSAP/ScrollTrigger/Embla CDN dan yuklanadi. Internet bo‘lmasa sahifa baribir to‘liq o‘qiladi, ip animatsiyalari tayyor holda ko‘rinadi.
 
-### Option 2: Local server (recommended)
-```bash
-# Python 3
-python -m http.server 8000
+## Yer shari ("Mato yo‘li")
+Globus oltin ip (meridian va parallellar) bilan chiziladi, Quvasoy nuqtasi markazda. Kontinentlarni ko‘rsatish uchun `index.html` da `app.js` dan oldin `window.LAND_DOTS = [[lat, lon], ...]` massivini beruvchi skript ulang (quruqlik nuqtalari). Xitoy va Turkiya nuqtalari va iplari faqat `CONFIG.showRouteCountries = true` bo‘lganda chiqadi.
+# Ellycardin Tekstil — sayt
 
-# Node.js
-npx serve .
+Ishga tushirish: `index.html` ni ikki marta bosib oching (server shart emas) yoki papkani istalgan statik hostingga yuklang.
 
-# PHP
-php -S localhost:8000
-```
+## Fayllar
+- `index.html` — sahifa tuzilmasi
+- `css/styles.css` — dizayn
+- `js/config.js` — kontaktlar, rekvizitlar, bayroqlar (`index.html` da app.js dan OLDIN ulangan bo‘lishi shart)
+- `js/app.js` — tillar, animatsiyalar, forma, slayder
+- `assets/logo-full.png`, `assets/logo-mark.png` — logotip (shaffof)
 
-Then open `http://localhost:8000`
+## Qo‘shishingiz kerak (ixtiyoriy, bo‘lmasa ham sayt ishlaydi)
+- `assets/hero.mp4` va `assets/hero.webm` — orqa fon videosi (15-30 s, ovozsiz). `assets/hero-poster.jpg` ixtiyoriy.
+- `assets/products/interlok.jpg`, `rib.jpg`, `kulirka.jpg`, `fleece.jpg`, `pike.jpg`, `footer.jpg` — mahsulot rasmlari. Nomlar va matnlar `js/app.js` ichidagi `PRODUCTS` ro‘yxatida (hozircha NAMUNA).
 
-## File Structure
+## Bayroqlar (`js/config.js`)
+- `showRouteCountries` — "Xitoy / Turkiya" yozuvlarini ko‘rsatish (egasi tasdiqlagandan keyin)
+- `showTeam` — "Jamoa" bo‘limini ko‘rsatish (tasdiqlangandan keyin; matnlarni avval tekshiring)
 
-```
-index.html          — Main HTML file
-css/styles.css      — All styles (design tokens, layout, components, print)
-js/config.js        — Feature flags and confirmed contact constants
-js/i18n.js          — All translations (uz/ru/en) + language switcher
-js/products.js      — Product data (placeholder names — edit freely)
-js/main.js          — App logic: loader, nav, animations, slider, form, FAQ, etc.
-assets/             — See "Assets to Supply" below
-README.md           — This file
-```
+## Eslatma
+GSAP/ScrollTrigger/Embla CDN dan yuklanadi. Internet bo‘lmasa sahifa baribir to‘liq o‘qiladi, ip animatsiyalari tayyor holda ko‘rinadi.
 
-## Configuration
-
-Edit `js/config.js` to toggle features:
-
-```javascript
-var CONFIG = {
-  showRouteCountries: false,  // true = "Xitoy"/"Turkiya"; false = "Mato"/"Ip"
-  showTeam: false,            // true = show #team section
-  // ... contact info (confirmed facts only)
-};
-```
-
-## Customization
-
-### Replace product data
-Edit `js/products.js`. Each product has: `id`, `image`, `title` (uz/ru/en), `text` (uz/ru/en).
-
-### Change colors
-All design tokens are CSS variables in `css/styles.css` under `:root`.
-
-### Edit copy/text
-All visible text is in `js/i18n.js` — edit the uz/ru/en objects. Keys must remain identical.
-
-## Assets to Supply
-
-The following files go in the `assets/` directory. **The site works without them** (fallbacks are provided):
-
-| File | Purpose | Fallback |
-|------|---------|----------|
-| `assets/logo-full.png` | Full logo (hero) | Text wordmark "Ellycardin TEKSTİL" |
-| `assets/logo-mark.png` | Logo mark (nav, footer) | Gold circle with "E" |
-| `assets/hero.mp4` | Hero background video (H.264) | Animated gold silk lines SVG |
-| `assets/hero.webm` | Hero video (VP9, preferred) | MP4 or silk lines |
-| `assets/hero-poster.jpg` | Video poster frame | Emerald gradient |
-| `assets/products/*.jpg` | Product photos (6 images) | CSS knit/weave texture pattern |
-
-### Recommended specs:
-- **Hero video**: 1080p, muted, loop-friendly, 10-30 seconds, H.264 + WebM
-- **Product images**: 800×600px, JPG, optimized (<100KB each)
-- **Logo**: PNG with transparency, SVG preferred
-
-## Deployment
-
-### Static hosting (Netlify, Vercel, GitHub Pages)
-Upload all files as-is. No build step needed.
-
-### Custom server
-Serve the root directory. Ensure MIME types are correct:
-- `.html` → `text/html`
-- `.css` → `text/css`
-- `.js` → `application/javascript`
-- `.mp4` → `video/mp4`
-- `.webm` → `video/webm`
-
-## Known Limitations
-
-1. **CDN dependency**: GSAP, Lenis, and Embla load from jsDelivr. If CDN is unreachable, the site remains fully functional (no animations, no slider autoplay).
-2. **No backend**: Form sends via WhatsApp/mailto links. For a Telegram bot or database, a backend is needed.
-3. **No image optimization**: Product images are loaded as-is. Consider using a CDN with image optimization.
-4. **Print**: Only the requisites section is styled for print. Other sections are hidden.
-
-## Accessibility Notes
-
-- Skip link to main content
-- All interactive elements are keyboard-accessible
-- Focus visible rings on all focusable elements
-- `aria-label`, `aria-expanded`, `aria-hidden` used appropriately
-- Color contrast meets WCAG AA (4.5:1 minimum)
-- `prefers-reduced-motion` disables all animations
-- Touch targets are minimum 44px
-
-## Performance
-
-- Fonts preloaded
-- Images lazy-loaded
-- Video preload="metadata" (doesn't auto-download)
-- No layout shift (aspect-ratio set)
-- CSS is minimal and non-blocking
-- JS is deferred
-
-## Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- iOS Safari 14+
-- Android Chrome 90+
-
-## License
-
-© 2026 ELLYCARDIN TEKSTIL FC LLC. All rights reserved.
+## Yer shari ("Mato yo‘li")
+Globus oltin ip (meridian va parallellar) bilan chiziladi, Quvasoy nuqtasi markazda. Kontinentlarni ko‘rsatish uchun `index.html` da `app.js` dan oldin `window.LAND_DOTS = [[lat, lon], ...]` massivini beruvchi skript ulang (quruqlik nuqtalari). Xitoy va Turkiya nuqtalari va iplari faqat `CONFIG.showRouteCountries = true` bo‘lganda chiqadi.

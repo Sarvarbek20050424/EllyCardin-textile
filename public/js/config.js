@@ -2,14 +2,19 @@
  * ELLYCARDIN TEKSTIL — Feature flags & constants
  */
 var CONFIG = {
-  showRouteCountries: false,
-  showTeam: false,
+  // Feature flags (unconfirmed facts hidden behind these)
+  showRouteCountries: false,  // true = show "Xitoy"/"Turkiya"; false = show "Mato"/"Ip"
+  showTeam: false,            // true = render #team section and nav link
+  
+  // Contact constants (confirmed)
   phones: ['+998909179929', '+998990919929'],
   whatsapp: '998990919929',
   telegram: '+998990919929',
   email: 'ellycardin.tekstil@mail.ru',
   instagram: 'https://instagram.com/mashxura_zafarovna',
   instagramHandle: '@mashxura_zafarovna',
+  
+  // Company info (confirmed)
   legalName: '"ELLYCARDIN TEKSTIL" FC LLC',
   address: {
     uz: "O'zbekiston, Farg'ona viloyati, Quvasoy shahri, Mustaqillik ko'chasi, 3-uy",
@@ -24,6 +29,8 @@ var CONFIG = {
     bankCode: '00491',
     swift: 'TRSAUZ22'
   },
+  
+  // Activity wording (confirmed - never use "trikotaj")
   activity: {
     uz: "To'qimachilik: mato va tikuvchilik",
     ru: 'Текстиль: ткани и пошив',

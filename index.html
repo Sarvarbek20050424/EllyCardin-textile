@@ -1,23 +1,503 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ELLYCARDIN TEKSTIL — Trikotaj ishlab chiqarish | Kuvasay, Farg'ona</title>
-    <meta name="description" content="ELLYCARDIN TEKSTIL FC LLC — professional trikotaj mahsulotlari ishlab chiqaruvchisi. Kulirka, interlok, rib, fleece, pique, footer." />
-    <meta property="og:title" content="ELLYCARDIN TEKSTIL — Trikotaj ishlab chiqarish" />
-    <meta property="og:description" content="Professional trikotaj mahsulotlari ishlab chiqaruvchisi. Kuvasay, Farg'ona viloyati, O'zbekiston." />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-      html, body { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
-      body { font-family: 'Manrope', sans-serif; background-color: #FBF9F4; color: #1B2623; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ELLYCARDIN TEKSTIL — To'qimachilik korxonasi | Quvasoy, Farg'ona</title>
+  <meta name="description" content="ELLYCARDIN TEKSTIL MChJ — Farg'ona viloyati, Quvasoy shahridagi tekstil korxonasi. Mato va tikuvchilik bo'yicha hamkorlik.">
+  <meta property="og:title" content="ELLYCARDIN TEKSTIL — To'qimachilik korxonasi">
+  <meta property="og:description" content="Farg'ona viloyati, Quvasoydagi tekstil korxonasi. Hamkorlik, shartnoma va to'lov bo'yicha barcha ma'lumotlar.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ELLYCARDIN TEKSTIL",
+    "legalName": "\"ELLYCARDIN TEKSTIL\" FC LLC",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mustakillik street, house 3",
+      "addressLocality": "Kuvasay",
+      "addressRegion": "Fergana",
+      "addressCountry": "UZ"
+    },
+    "taxID": "310030163",
+    "telephone": "+998990919929",
+    "email": "ellycardin.tekstil@mail.ru"
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Loader -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">
+        <span class="loader__wordmark">Ellycardin</span>
+        <span class="loader__sub">TEKSTİL</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cursor trail canvas -->
+  <canvas id="cursor-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navbar -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-pill">
+      <a href="#top" class="nav-logo" aria-label="Ellycardin Tekstil — bosh sahifa">
+        <span class="nav-logo__mark">E</span>
+        <span class="nav-logo__text">Ellycardin</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Asosiy navigatsiya">
+        <a href="#about" data-i18n="nav.about">Korxona</a>
+        <a href="#process" data-i18n="nav.activity">Faoliyat</a>
+        <a href="#products" data-i18n="nav.products">Mahsulot</a>
+        <a href="#inquiry" data-i18n="nav.inquiry">So'rov</a>
+        <a href="#requisites" data-i18n="nav.requisites">Rekvizitlar</a>
+        <a href="#contact" data-i18n="nav.contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Tilni tanlash">
+          <button class="lang-btn active" data-lang="uz" aria-label="O'zbekcha">UZ</button>
+          <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <a href="#inquiry" class="nav-cta" aria-label="So'rov yuborish">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menyu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__fill" id="scroll-progress-fill"></div>
+      <svg class="scroll-progress__needle" id="scroll-needle" width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="var(--gold)"/></svg>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section id="top" class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg">
+        <video class="hero__video" muted loop playsinline autoplay preload="metadata" poster="">
+          <source src="/assets/hero.webm" type="video/webm">
+          <source src="/assets/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero__silk" aria-hidden="true">
+          <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path class="silk-line silk-line--1" d="M0,400 Q300,350 600,400 T1200,400" fill="none" stroke="var(--gold)" stroke-width="1"/>
+            <path class="silk-line silk-line--2" d="M0,300 Q400,250 800,300 T1200,300" fill="none" stroke="var(--gold)" stroke-width="0.5"/>
+            <path class="silk-line silk-line--3" d="M0,500 Q200,450 600,500 T1200,500" fill="none" stroke="var(--gold)" stroke-width="0.8"/>
+          </svg>
+        </div>
+        <div class="hero__overlay"></div>
+      </div>
+      <!-- Thread -->
+      <svg class="section-thread hero-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="hero__content">
+        <div class="hero__logo-reveal">
+          <h1 id="hero-heading" class="hero__wordmark">
+            <span class="hero__word-main">Ellycardin</span>
+            <span class="hero__word-sub">TEKSTİL</span>
+          </h1>
+        </div>
+        <p class="hero__lead" data-i18n="hero.lead">Farg'ona viloyati, Quvasoydagi tekstil korxonasi. Hamkorlik, shartnoma va to'lov bo'yicha barcha ma'lumotlar shu sahifada.</p>
+        <div class="hero__actions">
+          <a href="#inquiry" class="btn btn--gold" data-i18n="hero.cta1">So'rov yuborish</a>
+          <a href="#requisites" class="btn btn--outline" data-i18n="hero.cta2">Rekvizitlar</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-mouse__dot"></div></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--ivory" aria-labelledby="about-heading">
+      <svg class="section-thread about-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__knot" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40"><path d="M20,8 C26,8 32,14 32,20 C32,26 26,32 20,32 C14,32 8,26 8,20 C8,14 14,8 20,8 M20,14 C17,14 14,17 14,20 C14,23 17,26 20,26 C23,26 26,23 26,20 C26,17 23,14 20,14" fill="none" stroke="var(--gold)" stroke-width="1"/></svg>
+          </div>
+          <h2 id="about-heading" class="section-title">
+            <span class="section-title__main" data-i18n="about.title1">Korxona</span>
+            <span class="section-title__accent" data-i18n="about.title2">haqida</span>
+          </h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="about.p1">"ELLYCARDIN TEKSTIL" MChJ — Farg'ona viloyati, Quvasoy shahrida faoliyat yurituvchi tekstil korxonasi. Biz mato ishlab chiqarish va tikuvchilik sohasida xizmat ko'rsatamiz.</p>
+            <p data-i18n="about.p2">Korxonamiz mahalliy va xorijiy hamkorlar bilan uzoq muddatli munosabatlarga asoslangan hamkorlikni qadrlaydi. Sifat, ishonchlilik va o'z vaqtida yetkazib berish — bizning asosiy tamoyillarimiz.</p>
+          </div>
+          <div class="about-facts">
+            <table class="facts-table">
+              <tbody>
+                <tr><th data-i18n="about.fact.name">Korxona nomi</th><td>"ELLYCARDIN TEKSTIL" FC LLC</td></tr>
+                <tr><th data-i18n="about.fact.field">Faoliyat</th><td data-i18n="about.fact.fieldVal">To'qimachilik: mato va tikuvchilik</td></tr>
+                <tr><th data-i18n="about.fact.address">Manzil</th><td data-i18n="about.fact.addressVal">O'zbekiston, Farg'ona viloyati, Quvasoy shahri, Mustaqillik ko'chasi, 3-uy</td></tr>
+                <tr><th data-i18n="about.fact.tax">STIR</th><td>310030163</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FABRIC ROUTE -->
+    <section id="route" class="section section--emerald" aria-labelledby="route-heading">
+      <svg class="section-thread route-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="route-heading" class="section-title">
+            <span class="section-title__main" data-i18n="route.title1">Mato</span>
+            <span class="section-title__accent" data-i18n="route.title2">yo'li</span>
+          </h2>
+        </div>
+        <div class="route-map" id="route-map">
+          <svg class="route-svg" viewBox="0 0 600 300" aria-hidden="true">
+            <!-- Nodes -->
+            <circle class="route-node" cx="100" cy="80" r="6" fill="var(--gold)" opacity="0.6"/>
+            <circle class="route-node" cx="100" cy="220" r="6" fill="var(--gold)" opacity="0.6"/>
+            <circle class="route-node route-node--main" cx="450" cy="150" r="10" fill="var(--gold)"/>
+            <!-- Threads -->
+            <path class="route-thread-line" d="M106,80 Q280,80 440,150" fill="none" stroke="var(--gold)" stroke-width="1.2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+            <path class="route-thread-line" d="M106,220 Q280,220 440,150" fill="none" stroke="var(--gold)" stroke-width="1.2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+            <path class="route-thread-line route-thread-line--exit" d="M450,160 L450,300" fill="none" stroke="var(--gold)" stroke-width="1.2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+            <!-- Labels -->
+            <text class="route-label" x="100" y="60" text-anchor="middle" data-i18n-attr="textContent" data-i18n="route.nodeA">Mato</text>
+            <text class="route-label" x="100" y="250" text-anchor="middle" data-i18n-attr="textContent" data-i18n="route.nodeB">Ip</text>
+            <text class="route-label route-label--main" x="450" y="130" text-anchor="middle">Quvasoy</text>
+            <!-- Pin pulse -->
+            <circle class="route-pulse" cx="450" cy="150" r="10" fill="none" stroke="var(--gold)" stroke-width="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section section--ivory" aria-labelledby="process-heading">
+      <svg class="section-thread process-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="process-heading" class="section-title">
+            <span class="section-title__main" data-i18n="process.title1">Ishlab</span>
+            <span class="section-title__accent" data-i18n="process.title2">chiqarish</span>
+          </h2>
+        </div>
+        <div class="process-steps">
+          <div class="process-line" aria-hidden="true">
+            <svg viewBox="0 0 1000 4" preserveAspectRatio="none">
+              <path d="M0,2 L1000,2" fill="none" stroke="var(--line)" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/>
+              <path class="process-line-fill" d="M0,2 L1000,2" fill="none" stroke="var(--gold)" stroke-width="1.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="process-step" data-step="1">
+            <div class="process-step__node"><span>01</span></div>
+            <svg class="process-step__icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M4,24 L16,4 L28,24 Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10,24 L16,14 L22,24" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+            <h3 data-i18n="process.step1.title">Mato</h3>
+            <p data-i18n="process.step1.text">Sifatli xomashyo tanlash va tayyorlash.</p>
+          </div>
+          <div class="process-step" data-step="2">
+            <div class="process-step__node"><span>02</span></div>
+            <svg class="process-step__icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M8,6 L8,26 M24,6 L24,26 M8,16 L24,16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <h3 data-i18n="process.step2.title">Kesish va tikuv</h3>
+            <p data-i18n="process.step2.text">Aniq kesish va professional tikuv ishlari.</p>
+          </div>
+          <div class="process-step" data-step="3">
+            <div class="process-step__node"><span>03</span></div>
+            <svg class="process-step__icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12,16 L15,19 L21,13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3 data-i18n="process.step3.title">Sifat nazorati</h3>
+            <p data-i18n="process.step3.text">Har bir mahsulot sinchkovlik bilan tekshiriladi.</p>
+          </div>
+          <div class="process-step" data-step="4">
+            <div class="process-step__node"><span>04</span></div>
+            <svg class="process-step__icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="6" y="10" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6,14 L16,20 L26,14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <h3 data-i18n="process.step4.title">Tayyor mahsulot</h3>
+            <p data-i18n="process.step4.text">Qadoqlash va buyurtmachi ga yetkazib berish.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section section--emerald-2" aria-labelledby="products-heading">
+      <svg class="section-thread products-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="products-heading" class="section-title">
+            <span class="section-title__main" data-i18n="products.title1">Mahsulot</span>
+            <span class="section-title__accent" data-i18n="products.title2">lari</span>
+          </h2>
+        </div>
+        <div class="slider-wrapper">
+          <div class="embla" id="products-slider">
+            <div class="embla__container" id="slider-container">
+              <!-- Products injected by JS -->
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Oldingi">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="slider-btn slider-btn--play" id="slider-play" aria-label="Avtomatik aylantirish">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="play-icon" d="M4 2l10 6-10 6V2z" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:none"><path class="pause-icon" d="M3 2h3v12H3zM10 2h3v12h-3z" fill="currentColor"/></svg>
+            </button>
+            <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Keyingi">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM (hidden by default, controlled by config) -->
+    <section id="team" class="section section--ivory" aria-labelledby="team-heading" style="display:none">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="team-heading" class="section-title">
+            <span class="section-title__main" data-i18n="team.title1">Jamoa</span>
+            <span class="section-title__accent" data-i18n="team.title2">miz</span>
+          </h2>
+        </div>
+        <div class="team-content">
+          <div class="team-portrait" aria-hidden="true">
+            <div class="team-portrait__placeholder">MZ</div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Mashxura Zafarovna</h3>
+            <p class="team-role" data-i18n="team.role">Rahbar</p>
+            <p class="team-statement" data-i18n="team.statement">Korxonamizda 300 dan ortiq ayol mehnat qiladi. Biz ayollar mehnatini qadrlaymiz va ularning kasbiy o'sishiga ko'maklashamiz.</p>
+            <div class="team-counter">
+              <span class="team-counter__number" id="team-counter">0</span>
+              <span class="team-counter__label" data-i18n="team.counterLabel">xodim</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRY -->
+    <section id="inquiry" class="section section--emerald" aria-labelledby="inquiry-heading">
+      <svg class="section-thread inquiry-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="inquiry-heading" class="section-title">
+            <span class="section-title__main" data-i18n="inquiry.title1">So'rov</span>
+            <span class="section-title__accent" data-i18n="inquiry.title2">yuborish</span>
+          </h2>
+        </div>
+        <p class="inquiry-subtitle" data-i18n="inquiry.subtitle">Savolingiz yoki buyurtmangiz bo'lsa, formani to'ldiring. Biz siz bilan tez orada bog'lanamiz.</p>
+        <form class="inquiry-form" id="inquiry-form" novalidate>
+          <!-- Honeypot -->
+          <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px">
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="inq-name" data-i18n="inquiry.name">Ismingiz</label>
+              <input type="text" id="inq-name" name="name" required autocomplete="name">
+              <span class="form-error" id="err-name" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="inq-phone" data-i18n="inquiry.phone">Telefon raqamingiz</label>
+              <input type="tel" id="inq-phone" name="phone" required autocomplete="tel" placeholder="+998">
+              <span class="form-error" id="err-phone" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="inq-product" data-i18n="inquiry.product">Mahsulotni tanlang</label>
+              <select id="inq-product" name="product">
+                <option value="" data-i18n="inquiry.productPlaceholder">Mahsulotni tanlang...</option>
+                <!-- Options injected by JS -->
+                <option value="other" data-i18n="inquiry.productOther">Boshqa</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="inq-quantity" data-i18n="inquiry.quantity">Hajmi</label>
+              <input type="text" id="inq-quantity" name="quantity">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="inq-comment" data-i18n="inquiry.comment">Izoh</label>
+              <textarea id="inq-comment" name="comment" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-checkbox">
+              <input type="checkbox" id="inq-consent" name="consent" required>
+              <span data-i18n="inquiry.consent">Shaxsiy ma'lumotlarimni qayta ishlashga rozilik beraman</span>
+            </label>
+            <span class="form-error" id="err-consent" aria-live="polite"></span>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn--gold btn--submit" id="btn-whatsapp" data-i18n="inquiry.sendWA">WhatsApp orqali yuborish</button>
+            <button type="button" class="btn btn--outline" id="btn-email" data-i18n="inquiry.sendEmail">Pochta orqali</button>
+          </div>
+          <div class="form-status" id="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--ivory" aria-labelledby="faq-heading">
+      <svg class="section-thread faq-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="faq-heading" class="section-title">
+            <span class="section-title__main" data-i18n="faq.title1">Ko'p</span>
+            <span class="section-title__accent" data-i18n="faq.title2">beriladigan savollar</span>
+          </h2>
+        </div>
+        <div class="faq-list" id="faq-list">
+          <!-- FAQ items injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUISITES -->
+    <section id="requisites" class="section section--emerald" aria-labelledby="req-heading">
+      <svg class="section-thread req-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="req-heading" class="section-title">
+            <span class="section-title__main" data-i18n="req.title1">Rekvizit</span>
+            <span class="section-title__accent" data-i18n="req.title2">lar</span>
+          </h2>
+        </div>
+        <div class="req-table-wrap">
+          <table class="req-table" id="req-table">
+            <tbody id="req-tbody">
+              <!-- Rows injected by JS -->
+            </tbody>
+          </table>
+        </div>
+        <div class="req-actions">
+          <button class="btn btn--outline btn--light" id="btn-pdf" data-i18n="req.downloadPdf">PDF yuklab olish</button>
+        </div>
+        <div class="sr-only" aria-live="polite" id="copy-status"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--ivory" aria-labelledby="contact-heading">
+      <svg class="section-thread contact-thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M8,0 L8,100" fill="none" stroke="var(--gold)" stroke-width="0.3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round"/>
+      </svg>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__knot" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40"><path d="M20,8 C26,8 32,14 32,20 C32,26 26,32 20,32 C14,32 8,26 8,20 C8,14 14,8 20,8 M20,14 C17,14 14,17 14,20 C14,23 17,26 20,26 C23,26 26,23 26,20 C26,17 23,14 20,14" fill="none" stroke="var(--gold)" stroke-width="1"/></svg>
+          </div>
+          <h2 id="contact-heading" class="section-title">
+            <span class="section-title__main" data-i18n="contact.title1">Aloqa</span>
+            <span class="section-title__accent" data-i18n="contact.title2">ma'lumotlari</span>
+          </h2>
+        </div>
+        <div class="contact-links">
+          <a href="tel:+998909179929" class="contact-link">+998 90 917 99 29</a>
+          <a href="tel:+998990919929" class="contact-link">+998 99 091 99 29</a>
+          <a href="https://wa.me/998990919929" class="contact-link" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://t.me/+998990919929" class="contact-link" target="_blank" rel="noopener">Telegram</a>
+          <a href="mailto:ellycardin.tekstil@mail.ru" class="contact-link">ellycardin.tekstil@mail.ru</a>
+          <a href="https://instagram.com/mashxura_zafarovna" class="contact-link" target="_blank" rel="noopener">@mashxura_zafarovna</a>
+        </div>
+        <address class="contact-address" data-i18n="contact.address">O'zbekiston, Farg'ona viloyati, Quvasoy shahri, Mustaqillik ko'chasi, 3-uy</address>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__mark">E</span>
+        <span class="footer__copy">© 2026 ELLYCARDIN TEKSTIL</span>
+      </div>
+      <div class="footer__actions">
+        <div class="lang-switch lang-switch--footer">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="footer__top" id="btn-top" aria-label="Yuqoriga">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" style="display:none">
+    <div class="lightbox__overlay" id="lightbox-overlay"></div>
+    <div class="lightbox__content">
+      <button class="lightbox__close" id="lightbox-close" aria-label="Yopish">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="lightbox__image" id="lightbox-image"></div>
+      <div class="lightbox__info">
+        <h3 class="lightbox__title" id="lightbox-title"></h3>
+        <p class="lightbox__text" id="lightbox-text"></p>
+        <button class="btn btn--gold" id="lightbox-inquiry" data-i18n="products.inquire">Shu mahsulotga so'rov</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__nav">
+      <a href="#about" data-i18n="nav.about">Korxona</a>
+      <a href="#process" data-i18n="nav.activity">Faoliyat</a>
+      <a href="#products" data-i18n="nav.products">Mahsulot</a>
+      <a href="#inquiry" data-i18n="nav.inquiry">So'rov</a>
+      <a href="#requisites" data-i18n="nav.requisites">Rekvizitlar</a>
+      <a href="#contact" data-i18n="nav.contact">Aloqa</a>
+    </nav>
+  </div>
+
+  <!-- CDN Libraries -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/embla-carousel@8.1.5/dist/embla-carousel.umd.min.js"></script>
+
+  <!-- App script (combined) -->
+  <script defer src="./js/app.js"></script>
+
+  <!-- Vite entry (minimal, for build compatibility) -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

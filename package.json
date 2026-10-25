@@ -1,5 +1,6 @@
 {
   "name": "sandbox-workspace",
+   "homepage": "/",
   "private": true,
   "type": "module",
   "scripts": {

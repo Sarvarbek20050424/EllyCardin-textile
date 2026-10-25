@@ -3,7 +3,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { productData, type Locale } from '../i18n';
+import { type Locale } from '../i18n';
+import { useStore, type Product } from '../store';
 
 interface ProductSliderProps {
   locale: Locale;
@@ -41,12 +42,13 @@ const productPatterns: Record<string, string> = {
 };
 
 export default function ProductSlider({ locale }: ProductSliderProps) {
-  const products = productData[locale];
+  const { data } = useStore();
+  const products = (data.products[locale] as Product[]).filter(p => p.published);
   const [activeCategory, setActiveCategory] = useState('all');
-  const [lightboxProduct, setLightboxProduct] = useState<typeof products[0] | null>(null);
+  const [lightboxProduct, setLightboxProduct] = useState<Product | null>(null);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 5000, stopOnInteraction: true })]);
 
-  const filteredProducts = activeCategory === 'all' ? products : products.filter(p => p.category === activeCategory);
+  const filteredProducts = activeCategory === 'all' ? products : products.filter((p: Product) => p.category === activeCategory);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -191,7 +193,7 @@ export default function ProductSlider({ locale }: ProductSliderProps) {
   );
 }
 
-function ProductCard({ product, onClick }: { product: typeof productData.uz[0]; onClick: () => void }) {
+function ProductCard({ product, onClick }: { product: Product; onClick: () => void }) {
   const imageUrl = productImages[product.id];
   
   return (

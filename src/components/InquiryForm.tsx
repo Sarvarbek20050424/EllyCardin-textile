@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { productData, translations, type Locale } from '../i18n';
+import { useStore } from '../store';
 
 interface InquiryFormProps {
   locale: Locale;
@@ -15,7 +16,8 @@ interface FormErrors {
 }
 
 export default function InquiryForm({ locale, t }: InquiryFormProps) {
-  const products = productData[locale];
+  const { data, addInquiry } = useStore();
+  const products = data.products[locale] as Array<{ id: number; name: string; description: string; category: string; specs: string[] }>;
   const ti = t.inquiry;
   const [formData, setFormData] = useState({
     name: '',
@@ -54,11 +56,19 @@ export default function InquiryForm({ locale, t }: InquiryFormProps) {
 
     setStatus('sending');
 
-    // Simulate API call
+    // Save inquiry to store (simulates API call)
     setTimeout(() => {
+      addInquiry({
+        name: formData.name,
+        phone: formData.phone,
+        product: formData.product,
+        quantity: formData.quantity,
+        message: formData.message,
+        locale: locale,
+      });
       setStatus('success');
       setFormData({ name: '', phone: '', product: '', quantity: '', message: '', consent: false });
-    }, 1500);
+    }, 800);
   };
 
   const formatPhone = (value: string) => {

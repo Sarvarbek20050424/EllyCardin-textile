@@ -1,9 +1,11 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail, MapPin, Copy, Check, ChevronDown, ChevronUp, Send, Instagram, MessageCircle } from 'lucide-react';
-import { translations, productData, faqData, requisitesData, type Locale } from './i18n';
+import { translations, type Locale } from './i18n';
+import { useStore } from './store';
 import ProductSlider from './components/ProductSlider';
 import InquiryForm from './components/InquiryForm';
+import AdminPanel from './admin/AdminPanel';
 
 function App() {
   const [locale, setLocale] = useState<Locale>(() => {
@@ -16,8 +18,25 @@ function App() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showAdmin, setShowAdmin] = useState(() => {
+    return window.location.hash === '#admin';
+  });
 
   const t = translations[locale];
+
+  // Listen for hash changes to toggle admin
+  useEffect(() => {
+    const handleHashChange = () => {
+      setShowAdmin(window.location.hash === '#admin');
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // If admin panel is requested
+  if (showAdmin) {
+    return <AdminPanel onExit={() => { window.location.hash = ''; setShowAdmin(false); }} />;
+  }
 
   useEffect(() => {
     localStorage.setItem('ellycardin-locale', locale);
@@ -132,10 +151,10 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <HeroSection t={t} />
+      <HeroSection t={t} locale={locale} />
 
       {/* About Section */}
-      <AboutSection t={t} />
+      <AboutSection t={t} locale={locale} />
 
       {/* Products Section */}
       <section id="products" className="py-20 lg:py-28 bg-[var(--color-ivory)]">
@@ -198,6 +217,9 @@ function App() {
             </div>
             <p className="text-sm text-white/60">{t.footer.rights}</p>
             <div className="flex items-center gap-4">
+              <a href="#admin" className="text-xs text-white/40 hover:text-[var(--color-gold)] transition-colors">
+                Admin
+              </a>
               <a href="https://instagram.com/mashxura_zafarovna" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-gold)] transition-colors">
                 <Instagram size={20} />
               </a>
@@ -216,7 +238,10 @@ function App() {
 }
 
 // Hero Section Component
-function HeroSection({ t }: { t: typeof translations.uz }) {
+function HeroSection({ t, locale }: { t: typeof translations.uz; locale: Locale }) {
+  const { data } = useStore();
+  const heroTexts = data.siteTexts[locale] as any;
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -254,7 +279,7 @@ function HeroSection({ t }: { t: typeof translations.uz }) {
           transition={{ duration: 0.8, ease: [0.2, 0.7, 0.2, 1] }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold text-white mb-4 tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-            {t.hero.title}
+            {heroTexts?.hero?.title || t.hero.title}
           </h1>
         </motion.div>
 
@@ -264,7 +289,7 @@ function HeroSection({ t }: { t: typeof translations.uz }) {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0.7, 0.2, 1] }}
         >
           <p className="text-lg sm:text-xl lg:text-2xl text-[var(--color-gold)] mb-6 font-light" style={{ fontFamily: 'var(--font-heading)' }}>
-            {t.hero.subtitle}
+            {heroTexts?.hero?.subtitle || t.hero.subtitle}
           </p>
         </motion.div>
 
@@ -282,7 +307,7 @@ function HeroSection({ t }: { t: typeof translations.uz }) {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.2, 0.7, 0.2, 1] }}
           className="text-white/70 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          {t.hero.description}
+          {heroTexts?.hero?.description || t.hero.description}
         </motion.p>
 
         <motion.div
@@ -326,7 +351,10 @@ function HeroSection({ t }: { t: typeof translations.uz }) {
 }
 
 // About Section Component
-function AboutSection({ t }: { t: typeof translations.uz }) {
+function AboutSection({ t, locale }: { t: typeof translations.uz; locale: Locale }) {
+  const { data } = useStore();
+  const aboutTexts = data.siteTexts[locale] as any;
+  
   const facts = [
     { label: t.about.facts.name, value: t.about.factsValues.name },
     { label: t.about.facts.field, value: t.about.factsValues.field },
@@ -347,11 +375,11 @@ function AboutSection({ t }: { t: typeof translations.uz }) {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl lg:text-5xl font-semibold text-[var(--color-emerald-brand)] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-              {t.about.title}
+              {aboutTexts?.about?.title || t.about.title}
             </h2>
             <div className="w-16 h-[1px] bg-[var(--color-gold)] mb-6" />
             <p className="text-[var(--color-muted)] text-lg leading-relaxed">
-              {t.about.description}
+              {aboutTexts?.about?.description || t.about.description}
             </p>
           </motion.div>
 
@@ -380,8 +408,9 @@ function AboutSection({ t }: { t: typeof translations.uz }) {
 
 // FAQ Section Component
 function FAQSection({ t, locale }: { t: typeof translations.uz; locale: Locale }) {
+  const { data } = useStore();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const items = faqData[locale];
+  const items = data.faq[locale] as Array<{ q: string; a: string }>;
 
   return (
     <section id="faq" className="py-20 lg:py-28 bg-[var(--color-ivory)]">
@@ -444,8 +473,9 @@ function FAQSection({ t, locale }: { t: typeof translations.uz; locale: Locale }
 
 // Requisites Section Component
 function RequisitesSection({ t, locale }: { t: typeof translations.uz; locale: Locale }) {
+  const { data } = useStore();
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-  const items = requisitesData[locale];
+  const items = data.requisites[locale] as Array<{ label: string; value: string }>;
 
   const handleCopy = useCallback((value: string, index: number) => {
     navigator.clipboard.writeText(value).then(() => {

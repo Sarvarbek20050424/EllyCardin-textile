@@ -85,21 +85,34 @@
     </div>
   </header>
 
+  <!-- Stitch line with needle (runs along page edge) -->
+  <svg id="stitch-line" class="stitch-line" aria-hidden="true" preserveAspectRatio="none">
+    <path class="stitch-path" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="8,6" stroke-linecap="round"/>
+    <g class="stitch-needle">
+      <ellipse cx="0" cy="0" rx="2" ry="6" fill="var(--gold)"/>
+      <circle cx="0" cy="-5" r="1.5" fill="none" stroke="var(--gold)" stroke-width="0.8"/>
+    </g>
+  </svg>
+
   <main id="main-content">
     <!-- HERO -->
     <section id="top" class="hero" aria-labelledby="hero-heading">
       <div class="hero__bg">
         <video class="hero__video" muted loop playsinline autoplay preload="metadata" poster="">
-          <source src="/assets/hero.webm" type="video/webm">
-          <source src="/assets/hero.mp4" type="video/mp4">
+          <source src="./assets/hero.webm" type="video/webm">
+          <source src="./assets/hero.mp4" type="video/mp4">
         </video>
-        <div class="hero__silk" aria-hidden="true">
-          <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path class="silk-line silk-line--1" d="M0,400 Q300,350 600,400 T1200,400" fill="none" stroke="var(--gold)" stroke-width="1"/>
-            <path class="silk-line silk-line--2" d="M0,300 Q400,250 800,300 T1200,300" fill="none" stroke="var(--gold)" stroke-width="0.5"/>
-            <path class="silk-line silk-line--3" d="M0,500 Q200,450 600,500 T1200,500" fill="none" stroke="var(--gold)" stroke-width="0.8"/>
+        <!-- Interactive silk waves with cursor -->
+        <div class="hero__silk-interactive" aria-hidden="true">
+          <svg id="silk-waves" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path class="silk-wave silk-wave--1" d="M0,400 Q300,350 600,400 T1200,400" fill="none" stroke="var(--gold)" stroke-width="1.2" opacity="0.4"/>
+            <path class="silk-wave silk-wave--2" d="M0,300 Q400,250 800,300 T1200,300" fill="none" stroke="var(--gold)" stroke-width="0.8" opacity="0.3"/>
+            <path class="silk-wave silk-wave--3" d="M0,500 Q200,450 600,500 T1200,500" fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.35"/>
+            <path class="silk-wave silk-wave--4" d="M0,200 Q500,180 900,220 T1200,200" fill="none" stroke="var(--gold)" stroke-width="0.6" opacity="0.25"/>
           </svg>
         </div>
+        <!-- Flying fibers canvas -->
+        <canvas id="flying-fibers" aria-hidden="true"></canvas>
         <div class="hero__overlay"></div>
       </div>
       <!-- Thread -->

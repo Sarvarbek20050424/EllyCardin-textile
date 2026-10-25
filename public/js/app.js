@@ -236,12 +236,12 @@ function initLanguage() {
 // PRODUCTS
 // ============================================
 var PRODUCTS = [
-  { id: 'interlok', image: '/assets/products/interlok.jpg', title: { uz: 'Interlok', ru: 'Интерлок', en: 'Interlock' }, text: { uz: "Bir tomonlama silliq mato.", ru: 'Односторонний гладкий материал.', en: 'Smooth single-sided fabric.' } },
-  { id: 'rib', image: '/assets/products/rib.jpg', title: { uz: 'Rib', ru: 'Риб', en: 'Rib' }, text: { uz: "Elastik mato.", ru: 'Эластичный материал.', en: 'Elastic fabric.' } },
-  { id: 'kulirka', image: '/assets/products/kulirka.jpg', title: { uz: 'Kulirka', ru: 'Кулирка', en: 'Jersey' }, text: { uz: "Yengil, yupqa mato.", ru: 'Лёгкий, тонкий материал.', en: 'Light, thin fabric.' } },
-  { id: 'fleece', image: '/assets/products/fleece.jpg', title: { uz: 'Fleece', ru: 'Флис', en: 'Fleece' }, text: { uz: "Ichki tomoni yumshoq, issiq mato.", ru: 'Мягкий изнутри, тёплый материал.', en: 'Soft inside, warm fabric.' } },
-  { id: 'pike', image: '/assets/products/pike.jpg', title: { uz: 'Pike', ru: 'Пике', en: 'Pique' }, text: { uz: "To'qilgan strukturaviy mato.", ru: 'Структурный вязаный материал.', en: 'Structured knitted fabric.' } },
-  { id: 'footer', image: '/assets/products/footer.jpg', title: { uz: 'Footer', ru: 'Футер', en: 'Footer' }, text: { uz: "Mustahkam, zich mato.", ru: 'Прочный, плотный материал.', en: 'Durable, dense fabric.' } }
+  { id: 'interlok', image: './assets/products/interlok.jpg', title: { uz: 'Interlok', ru: 'Интерлок', en: 'Interlock' }, text: { uz: "Bir tomonlama silliq mato.", ru: 'Односторонний гладкий материал.', en: 'Smooth single-sided fabric.' } },
+  { id: 'rib', image: './assets/products/rib.jpg', title: { uz: 'Rib', ru: 'Риб', en: 'Rib' }, text: { uz: "Elastik mato.", ru: 'Эластичный материал.', en: 'Elastic fabric.' } },
+  { id: 'kulirka', image: './assets/products/kulirka.jpg', title: { uz: 'Kulirka', ru: 'Кулирка', en: 'Jersey' }, text: { uz: "Yengil, yupqa mato.", ru: 'Лёгкий, тонкий материал.', en: 'Light, thin fabric.' } },
+  { id: 'fleece', image: './assets/products/fleece.jpg', title: { uz: 'Fleece', ru: 'Флис', en: 'Fleece' }, text: { uz: "Ichki tomoni yumshoq, issiq mato.", ru: 'Мягкий изнутри, тёплый материал.', en: 'Soft inside, warm fabric.' } },
+  { id: 'pike', image: './assets/products/pike.jpg', title: { uz: 'Pike', ru: 'Пике', en: 'Pique' }, text: { uz: "To'qilgan strukturaviy mato.", ru: 'Структурный вязаный материал.', en: 'Structured knitted fabric.' } },
+  { id: 'footer', image: './assets/products/footer.jpg', title: { uz: 'Footer', ru: 'Футер', en: 'Footer' }, text: { uz: "Mustahkam, zich mato.", ru: 'Прочный, плотный материал.', en: 'Durable, dense fabric.' } }
 ];
 
 function getProductTitle(product) {
@@ -604,6 +604,243 @@ function getProductText(product) {
     video.addEventListener('error', function() { video.style.display = 'none'; });
   }
 
+  // ============================================
+  // INTERACTIVE SILK WAVES (cursor-reactive)
+  // ============================================
+  function initSilkWaves() {
+    if (reducedMotion) return;
+    var svg = document.getElementById('silk-waves');
+    if (!svg) return;
+    
+    var waves = svg.querySelectorAll('.silk-wave');
+    var mouseX = 0.5, mouseY = 0.5;
+    var targetX = 0.5, targetY = 0.5;
+    var heroSection = document.querySelector('.hero');
+    
+    // Base wave paths (normalized coordinates)
+    var basePaths = [
+      { points: [[0, 0.5], [0.25, 0.4375], [0.5, 0.5], [0.75, 0.5625], [1, 0.5]], amplitude: 0.05 },
+      { points: [[0, 0.375], [0.333, 0.3125], [0.667, 0.375], [1, 0.375]], amplitude: 0.04 },
+      { points: [[0, 0.625], [0.167, 0.5625], [0.5, 0.625], [0.833, 0.6875], [1, 0.625]], amplitude: 0.06 },
+      { points: [[0, 0.25], [0.417, 0.225], [0.75, 0.275], [1, 0.25]], amplitude: 0.03 }
+    ];
+    
+    // Track mouse position relative to hero
+    heroSection.addEventListener('mousemove', function(e) {
+      var rect = heroSection.getBoundingClientRect();
+      targetX = (e.clientX - rect.left) / rect.width;
+      targetY = (e.clientY - rect.top) / rect.height;
+    });
+    
+    heroSection.addEventListener('mouseleave', function() {
+      targetX = 0.5;
+      targetY = 0.5;
+    });
+    
+    function updateWaves() {
+      // Smooth interpolation
+      mouseX += (targetX - mouseX) * 0.08;
+      mouseY += (targetY - mouseY) * 0.08;
+      
+      var time = Date.now() * 0.001;
+      
+      for (var i = 0; i < waves.length && i < basePaths.length; i++) {
+        var base = basePaths[i];
+        var phaseOffset = i * 0.5;
+        var cursorInfluence = Math.abs(mouseX - 0.5) * 0.3 + Math.abs(mouseY - 0.5) * 0.2;
+        
+        // Build path with cursor influence
+        var pathData = 'M';
+        for (var j = 0; j < base.points.length; j++) {
+          var px = base.points[j][0];
+          var py = base.points[j][1];
+          
+          // Add wave motion
+          var wave = Math.sin(time + px * 4 + phaseOffset) * base.amplitude * 0.5;
+          
+          // Add cursor influence (waves bend toward cursor)
+          var dx = mouseX - px;
+          var dy = mouseY - py;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          var influence = Math.max(0, 1 - dist * 2) * cursorInfluence * 0.15;
+          
+          var finalX = px * 1200;
+          var finalY = (py + wave + dy * influence) * 800;
+          
+          if (j === 0) {
+            pathData += finalX + ',' + finalY;
+          } else {
+            // Use quadratic curves for smooth waves
+            var cpX = (base.points[j-1][0] + px) * 0.5 * 1200;
+            var cpY = (base.points[j-1][1] + py + wave * 0.5) * 0.5 * 800 + dy * influence * 0.5;
+            pathData += ' Q' + cpX + ',' + cpY + ' ' + finalX + ',' + finalY;
+          }
+        }
+        
+        waves[i].setAttribute('d', pathData);
+      }
+      
+      requestAnimationFrame(updateWaves);
+    }
+    
+    updateWaves();
+  }
+
+  // ============================================
+  // FLYING FIBERS (particles)
+  // ============================================
+  function initFlyingFibers() {
+    if (reducedMotion) return;
+    if (window.innerWidth < 768) return; // Disable on mobile
+    
+    var canvas = document.getElementById('flying-fibers');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    
+    var heroSection = document.querySelector('.hero');
+    var fibers = [];
+    var fiberCount = 35; // Keep under 40 as recommended
+    var animationId = null;
+    var isPageVisible = true;
+    
+    function resize() {
+      canvas.width = heroSection.offsetWidth;
+      canvas.height = heroSection.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    
+    // Create fibers
+    for (var i = 0; i < fiberCount; i++) {
+      fibers.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.2 - 0.1, // Slight upward drift
+        length: Math.random() * 8 + 4,
+        angle: Math.random() * Math.PI * 2,
+        rotationSpeed: (Math.random() - 0.5) * 0.02,
+        opacity: Math.random() * 0.4 + 0.2
+      });
+    }
+    
+    // Pause when page hidden
+    document.addEventListener('visibilitychange', function() {
+      isPageVisible = !document.hidden;
+      if (isPageVisible && !animationId) {
+        animate();
+      }
+    });
+    
+    function animate() {
+      if (!isPageVisible) {
+        animationId = null;
+        return;
+      }
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      for (var i = 0; i < fibers.length; i++) {
+        var f = fibers[i];
+        
+        // Update position
+        f.x += f.vx;
+        f.y += f.vy;
+        f.angle += f.rotationSpeed;
+        
+        // Wrap around
+        if (f.x < -f.length) f.x = canvas.width + f.length;
+        if (f.x > canvas.width + f.length) f.x = -f.length;
+        if (f.y < -f.length) f.y = canvas.height + f.length;
+        if (f.y > canvas.height + f.length) f.y = -f.length;
+        
+        // Draw fiber
+        ctx.save();
+        ctx.translate(f.x, f.y);
+        ctx.rotate(f.angle);
+        ctx.strokeStyle = 'rgba(194, 165, 107, ' + f.opacity + ')';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(-f.length / 2, 0);
+        ctx.lineTo(f.length / 2, 0);
+        ctx.stroke();
+        ctx.restore();
+      }
+      
+      animationId = requestAnimationFrame(animate);
+    }
+    
+    animate();
+  }
+
+  // ============================================
+  // STITCH LINE WITH NEEDLE
+  // ============================================
+  function initStitchLine() {
+    if (reducedMotion) return;
+    if (window.innerWidth < 768) return; // Disable on mobile
+    
+    var svg = document.getElementById('stitch-line');
+    if (!svg) return;
+    var path = svg.querySelector('.stitch-path');
+    var needle = svg.querySelector('.stitch-needle');
+    if (!path || !needle) return;
+    
+    var scrollProgress = 0;
+    var targetProgress = 0;
+    
+    function updateStitch() {
+      // Smooth interpolation
+      scrollProgress += (targetProgress - scrollProgress) * 0.1;
+      
+      // Calculate path based on scroll
+      var windowHeight = window.innerHeight;
+      var docHeight = document.documentElement.scrollHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var progress = scrollTop / (docHeight - windowHeight);
+      
+      // Create stitch path along left edge
+      var startX = 40; // 40px from left
+      var startY = 0;
+      var endY = docHeight * progress;
+      
+      // Add slight wave to the stitch
+      var waveAmplitude = 3;
+      var pathData = 'M' + startX + ',' + startY;
+      var segments = Math.floor(endY / 20);
+      
+      for (var i = 1; i <= segments; i++) {
+        var y = (endY / segments) * i;
+        var wave = Math.sin(i * 0.3 + scrollProgress * 10) * waveAmplitude;
+        pathData += ' L' + (startX + wave) + ',' + y;
+      }
+      
+      path.setAttribute('d', pathData);
+      
+      // Position needle at end of path
+      var needleX = startX + Math.sin(segments * 0.3 + scrollProgress * 10) * waveAmplitude;
+      var needleY = endY;
+      var needleAngle = Math.atan2(
+        Math.cos(segments * 0.3 + scrollProgress * 10) * waveAmplitude * 0.3,
+        20
+      ) * 180 / Math.PI;
+      
+      needle.setAttribute('transform', 'translate(' + needleX + ',' + needleY + ') rotate(' + (needleAngle + 90) + ')');
+      
+      requestAnimationFrame(updateStitch);
+    }
+    
+    window.addEventListener('scroll', function() {
+      var windowHeight = window.innerHeight;
+      var docHeight = document.documentElement.scrollHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      targetProgress = scrollTop / (docHeight - windowHeight);
+    }, { passive: true });
+    
+    updateStitch();
+  }
+
   function init() {
     initLanguage();
     initLoader();
@@ -611,6 +848,9 @@ function getProductText(product) {
     initScrollProgress();
     initLangSwitch();
     initVideo();
+    initSilkWaves();
+    initFlyingFibers();
+    initStitchLine();
     renderProducts();
     renderFAQ();
     renderRequisites();
